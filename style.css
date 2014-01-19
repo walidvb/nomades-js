@@ -1,0 +1,14 @@
+body {
+  margin-top: 50px;
+}
+section:after {
+  content: '';
+  width: 95%;
+  border-bottom: 1px solid grey;
+  display: inline-block;
+  margin: auto;
+  opacity: 0.5;
+}
+.correction {
+  display: none;
+}

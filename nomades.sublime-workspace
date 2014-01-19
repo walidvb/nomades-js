@@ -1,0 +1,1400 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"paddin",
+				"paddingLeftPage"
+			],
+			[
+				"s",
+				"slideDown	.slideDown()"
+			],
+			[
+				"bo",
+				"bolder"
+			],
+			[
+				"padding",
+				"paddingLeftPage"
+			],
+			[
+				"scroll",
+				"scrollLeft	.scrollLeft()"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"htt",
+				"httpBackend	\\$httpBackend"
+			],
+			[
+				"clear",
+				"clearTimeout();"
+			],
+			[
+				"array_",
+				"array_combine"
+			],
+			[
+				"strt",
+				"strtotime"
+			],
+			[
+				"drupal_json",
+				"drupal_json_encode	drupal_json_encode"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"variables",
+				"variables"
+			],
+			[
+				"menu_se",
+				"menu_set_active_trail"
+			],
+			[
+				"menu_s",
+				"menu_set_active_trail"
+			],
+			[
+				"menu_set_ac",
+				"menu_set_active_item"
+			],
+			[
+				"ent",
+				"entity_info"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"border",
+				"border-left"
+			],
+			[
+				"media",
+				"media landscape	landscape"
+			],
+			[
+				"do",
+				"dow	downto(0) { |n| .. }"
+			],
+			[
+				"en",
+				"encrypt"
+			],
+			[
+				"password_",
+				"password_confirmation"
+			],
+			[
+				"font-si",
+				"font-size-large"
+			],
+			[
+				"font",
+				"font-family-second"
+			],
+			[
+				"vars",
+				"vars"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"facebook",
+				"facebookCommentsSelector"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"node_is",
+				"node_is_past"
+			],
+			[
+				"nav",
+				"nav-link-bg"
+			],
+			[
+				"body",
+				"body-bg"
+			],
+			[
+				"tri",
+				"trigger	trigger"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"bck",
+				"background-color"
+			],
+			[
+				"con",
+				"console.log(message);"
+			],
+			[
+				"targetConta",
+				"targetContainerSelector"
+			],
+			[
+				"load",
+				"load_more"
+			],
+			[
+				"drupal",
+				"drupal_add_js"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"pager-",
+				"pager-previous"
+			],
+			[
+				"query",
+				"querystring.parse(qs, sep, eq);"
+			],
+			[
+				"postDa",
+				"postDataChunk"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"pro",
+				"processed"
+			],
+			[
+				"di",
+				"digi_"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"border-col",
+				"border-color"
+			],
+			[
+				"va",
+				"variables"
+			],
+			[
+				"blo",
+				"block-system-main-menu"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"field_view",
+				"field_view_value"
+			],
+			[
+				"user",
+				"user_load	user_load"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/LESS-build/LESS.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"haml",
+				"HTML2Haml: Convert clipboard content"
+			],
+			[
+				"iden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"idnen",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"cdnj",
+				"Cdnjs: Import URL only"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"cdn",
+				"Cdnjs: Import URL only"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"cdnjs",
+				"Cdnjs: Import URL only"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"sublime",
+				"Sublimerge: Compare to Snapshot"
+			],
+			[
+				"git",
+				"Git: Quick Commit"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"format ",
+				"Format: Php"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"snippet ",
+				"Snippet: html"
+			],
+			[
+				"hook_menu",
+				"Snippet: hook_menu"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"javas",
+				"Set Syntax: jQuery (JavaScript)"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"syntax",
+				"Set Syntax: PHP"
+			],
+			[
+				"preproce",
+				"Snippet: hook_preprocess"
+			],
+			[
+				"syn haml",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"2haml",
+				"HTML2Haml: Convert file"
+			],
+			[
+				"js2",
+				"JS2Coffee: Convert & Make New File"
+			],
+			[
+				"coffee",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"2ham",
+				"HTML2Haml: Convert file"
+			],
+			[
+				"coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"inden	",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"indent	",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"drupal_add",
+				"Snippet: drupal_add_js"
+			],
+			[
+				"hook_preprocess_",
+				"Snippet: hook_preprocess_HOOK"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"insall",
+				"Package Control: Install Package"
+			],
+			[
+				"preprocess",
+				"Snippet: hook_preprocess_page"
+			],
+			[
+				"field_formatter settings",
+				"Snippet: h_field_formatter_settings_form"
+			],
+			[
+				"hook_formatt",
+				"Snippet: hook_field_formatter_view"
+			],
+			[
+				"hook_prepr",
+				"Snippet: hook_preprocess_page"
+			],
+			[
+				"hook_preprocess",
+				"Snippet: hook_preprocess_HOOK"
+			],
+			[
+				"drupal add ",
+				"Snippet: drupal_add_js"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"drup",
+				"Snippet: hook_field_storage_update_field"
+			],
+			[
+				"php",
+				"Snippet: h_preprocess"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"insa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"check",
+				"Snippet: check_markup"
+			],
+			[
+				"region",
+				"Snippet: template_preprocess_region"
+			],
+			[
+				"link",
+				"Snippet: theme_link"
+			],
+			[
+				"prepr	",
+				"Snippet: h_preprocess"
+			]
+		],
+		"width": 531.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/project.html",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/projectList.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/project.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/jquery.masonry.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/projectList.html",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/bio.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/backgrounds.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/menu_project.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/slide.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/README.txt",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/menu.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/LICENSE",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/directives.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/bootstrap/less/navbar.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/.git/COMMIT_EDITMSG",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/contact.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/showList.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/app.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/controllers.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/less/animations.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/less/styleAdmin.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/bootstrap/less/mixins.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/projectListAdmin.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/data/works.json",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/less/variables.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/directivesAdmin.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/.gitignore",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/controllersAdmin.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/directives_backup.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/home.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/less/app.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/coffee/directives_coffe.coffee",
+		"/Users/Gaston/Dropbox/Stephane Website/web/blumer.sublime-workspace",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/index.html",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/bootstrap/less/git",
+		"/Users/Gaston/Dropbox/Stephane Website/web/cim",
+		"/Users/Gaston/Dropbox/Stephane Website/web/formats bio headers",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/data/bio.json",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/bootstrap/less/utilities.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/ngInfiniteScroll/ng-infinite-scroll.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/index.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/ngInfiniteScroll/ng-infinite-scroll.coffee",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/filters.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/modalResult.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/TO READ.txt",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/admin.haml",
+		"/Users/Gaston/dev/jsFiller/README.md",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/services.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/showList.html",
+		"/Users/Gaston/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/projectListAdmin.html",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/ui-sortable/src/sortable.js",
+		"/Users/Gaston/Dropbox/Stephane Website/angular/src/data/content.json",
+		"/Users/Gaston/Dropbox/Stephane Website/angular/src/data/works.json",
+		"/Users/Gaston/Dropbox/Stephane Website/angular/src/works.json",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/angular-bootstrap-scrollspy.min.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/scrollsnap/jquery.scrollsnap.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/less/style.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/script.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/js/appAdmin.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/jquery.panelSnap.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/scrollsnap/jquery.event.special.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/scrollsnap/jquery.easing.min.js",
+		"/Users/Gaston/Dropbox/Stephane Website/angular-phonecat/app/js/controllers.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials_haml/bioAdmin.haml",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/zeroclipboard/ZeroClipboard.min.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/contactAdmin.html",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/bootstrap/less/type.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/less/appAdmin.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/tmp/app.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/lib/bootstrap/less/glyphicons.less",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/css/appAdmin.css",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/data/theme.json",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/contact.html",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/home.html",
+		"/Users/Gaston/Dropbox/Stephane Website/web/scripts/web-server.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/Procfile",
+		"/Users/Gaston/Dropbox/Stephane Website/angular-phonecat/app/js/services.js",
+		"/Users/Gaston/Dropbox/Stephane Website/angular-phonecat/test/unit/controllersSpec.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/package.json",
+		"/Users/Gaston/Dropbox/Stephane Website/web/test/e2e/scenarios.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/test/unit/controllersSpec.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/test/unit/servicesSpec.js",
+		"/Users/Gaston/Dropbox/Stephane Website/web/app/partials/partial2.html",
+		"/Users/Gaston/Dropbox/Stephane Website/angular-phonecat/config/karma.conf.js",
+		"/Users/Gaston/Dropbox/Stephane Website/angular-phonecat/node_modules/karma/config.tpl.coffee",
+		"/Users/Gaston/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/Gaston/Library/Caches/Cleanup At Startup/Transmit/69A405B7-9F37-409A-B811-A89DDBAF1ED6/myJS.js",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/panels_bootstrap_layouts/plugins/layouts/bootstrap_twocol_7_5_stacked/bootstrap_twocol_stacked.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/panels_bootstrap_layouts/plugins/layouts/bootstrap_twocol_5_7_stacked/bootstrap-twocol-5-7-stacked.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/panels_bootstrap_layouts/plugins/layouts/bootstrap_twocol_7_5_stacked/bootstrap-twocol-7-5-stacked.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/libs/jquery.pin.js",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/node--event.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/field--artist-collection.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/lezoo/date.inc",
+		"/Users/Gaston/Library/Caches/Cleanup At Startup/Transmit/34FB04FC-032C-4CFE-9318-7A41E4B933A5/date.tokens.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/less/node.less",
+		"/Users/Gaston/Library/Caches/Cleanup At Startup/Transmit/DE8C2BA5-65F1-4B3F-8E87-4A548B27D51A/date.inc",
+		"/Users/Gaston/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/lezoo_feed/resource.processor.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/lezoo_feed/lezoo_feed.module",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/lezoo_feed/lezoo_feed.info",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/lezoo/modal.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/lezoo/lezoo.module",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/lezoo.info",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/template.php",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/js/myAngular.js",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/imagecache_token/imagecache_token.module",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/date/date.tokens.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/less/widget.less",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/page.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/js/custom.js",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/imagecache_actions/utility-form.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/imagecache_actions/canvasactions/imagecache_canvasactions.module",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/imagecache_actions/canvasactions/canvasactions.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/less/blog.less",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/less/style.less",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/less/variables.less",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/node--installations--mini.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/less/home.less",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/node--event--teaser.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/less/install.less",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/node.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/views-view-fields--carousel--events-carousel.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/lezoo/date_filter.inc",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/_node--event--teaser.tpl.php",
+		"/Users/Gaston/Sites/zoo/sites/all/modules/custom/views_infinite_scroll/js/views_infinite_scroll.js",
+		"/Users/Gaston/Sites/zoo/sites/all/themes/lezoo/templates/views-bootstrap-carousel-plugin-rows--events-carousel.tpl.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ng-bind",
+			"0.6",
+			"load",
+			"angular.element(elem)",
+			"1",
+			"$elem",
+			"_i",
+			"_ref",
+			"factory",
+			"compile",
+			".my-animation",
+			"\"spy\" =>",
+			"scroll-",
+			".directive",
+			"bolder",
+			"rowa",
+			"row",
+			".\ndirective('myIsotope', ['$timeout', function(timer){\n	return {\n		link: function(scope, elem, attrs)\n		{\n			timer(function() {\n				$(elem).isotope({\n					itemSelector: 'li',\n				});\n			}, 1500);\n		}\n	}\n}])",
+			"'univers'",
+			"univers",
+			"url('",
+			"row",
+			"2009",
+			"2010",
+			"2014",
+			"2011",
+			"2013",
+			"2012",
+			"high",
+			"Awards",
+			"elem",
+			"$elem",
+			"scope",
+			"elementTop",
+			"\"public\": false",
+			"i",
+			"type",
+			"location",
+			"Location",
+			"location",
+			"\"active\"",
+			"slide",
+			"description",
+			"#428bca",
+			"lastScrollPos",
+			"wrapperSelector",
+			"textBox",
+			"type",
+			"id_readable",
+			"@height",
+			"opacity",
+			"imgs",
+			"exp",
+			"    %script{:src => \"//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js\"}\n",
+			"line",
+			"backgrounds",
+			"content",
+			"image",
+			"{{background",
+			"backgrounds[",
+			"img-placeholder",
+			"location",
+			"\"category\"",
+			"project",
+			"href",
+			"bootstrap",
+			"date_orig",
+			"_",
+			"$date_orig",
+			"$date ",
+			"date_orig",
+			"type",
+			"_render_date",
+			"render_date",
+			"lezoo-node-date",
+			"PATH_SHELTER_FILES",
+			"240",
+			"imagecache_actions_file_field_description",
+			"topPadding",
+			"paddingTop",
+			"details",
+			"vars",
+			"ezoo",
+			"lezoo",
+			"bigimage",
+			"flyer",
+			"'field_flyer'",
+			"dpm",
+			"genre",
+			"field_soundcloud",
+			"jQuery",
+			"strtotime($date)",
+			"secondary",
+			"white",
+			"inks_to_social",
+			"label",
+			"section",
+			" MYMODULE",
+			"dotted",
+			"class=\"\"",
+			"scripts",
+			";",
+			"now",
+			"attrs",
+			"user",
+			"coverImage",
+			"description",
+			"class=\"field",
+			"element",
+			"'Sign up'",
+			":key",
+			"value",
+			"key",
+			"books_page",
+			"2.5",
+			"1s",
+			"1.5",
+			"/assets/fonts/",
+			";",
+			"assets",
+			"fonts",
+			"public",
+			"assets",
+			"webfonts",
+			"home_path",
+			"                           ",
+			"$})",
+			"Sample"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.465929418103,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"inde",
+				"app/index.haml"
+			],
+			[
+				"direcadmin",
+				"app/js/directivesAdmin.js"
+			],
+			[
+				"projadmin",
+				"app/partials_haml/projectListAdmin.haml"
+			],
+			[
+				"admin",
+				"app/admin.haml"
+			],
+			[
+				"styleadmin",
+				"app/less/styleAdmin.less"
+			],
+			[
+				"control",
+				"app/js/controllersAdmin.js"
+			],
+			[
+				"app.less",
+				"app/less/app.less"
+			],
+			[
+				"pro",
+				"app/partials/projectList.html"
+			],
+			[
+				"bio",
+				"app/data/bio.json"
+			],
+			[
+				"projec",
+				"app/partials_haml/project.haml"
+			],
+			[
+				"slide",
+				"app/partials_haml/slide.haml"
+			],
+			[
+				"index",
+				"app/index.haml"
+			],
+			[
+				"projlisthtm",
+				"app/partials/projectList.html"
+			],
+			[
+				"plistham",
+				"app/partials_haml/projectList.haml"
+			],
+			[
+				"proj",
+				"app/partials_haml/projectList.haml"
+			],
+			[
+				"projlistham",
+				"app/partials_haml/projectList.haml"
+			],
+			[
+				"conta",
+				"app/partials_haml/contact.haml"
+			],
+			[
+				"bioh",
+				"app/partials_haml/bio.haml"
+			],
+			[
+				"app",
+				"app/less/app.less"
+			],
+			[
+				"ind",
+				"app/index.haml"
+			],
+			[
+				"animan",
+				"app/less/animations.less"
+			],
+			[
+				"jquer",
+				"app/lib/jquery.masonry.js"
+			],
+			[
+				"",
+				"LICENSE"
+			],
+			[
+				"anima",
+				"app/less/animations.less"
+			],
+			[
+				"projlist",
+				"app/partials/projectList.html"
+			],
+			[
+				"project",
+				"app/partials_haml/project.haml"
+			],
+			[
+				"directive",
+				"app/js/directives.js"
+			],
+			[
+				"backgrou",
+				"app/partials_haml/backgrounds.haml"
+			],
+			[
+				"menu",
+				"app/partials_haml/menu_project.haml"
+			],
+			[
+				"read",
+				"README.txt"
+			],
+			[
+				"appjs",
+				"app/js/app.js"
+			],
+			[
+				"service",
+				"app/js/services.js"
+			],
+			[
+				"works",
+				"app/data/works.json"
+			],
+			[
+				"home",
+				"app/partials_haml/home.haml"
+			],
+			[
+				"contradmin",
+				"app/js/controllersAdmin.js"
+			],
+			[
+				"controll",
+				"app/js/controllers.js"
+			],
+			[
+				"directi",
+				"app/js/directivesAdmin.js"
+			],
+			[
+				"dire",
+				"app/js/directives.js"
+			],
+			[
+				"mixin",
+				"app/lib/bootstrap/less/mixins.less"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"style",
+				"app/less/styleAdmin.less"
+			],
+			[
+				"anim",
+				"app/less/animations.less"
+			],
+			[
+				"projectham",
+				"app/partials_haml/project.haml"
+			],
+			[
+				"animat",
+				"app/less/animations.less"
+			],
+			[
+				"app.le",
+				"app/less/app.less"
+			],
+			[
+				"contac",
+				"app/partials_haml/contact.haml"
+			],
+			[
+				"prjlist",
+				"app/partials/projectList.html"
+			],
+			[
+				"showlist",
+				"app/partials_haml/showList.haml"
+			],
+			[
+				"varia",
+				"app/less/variables.less"
+			],
+			[
+				"direc",
+				"app/js/directives.js"
+			],
+			[
+				"direct",
+				"app/js/directives.js"
+			],
+			[
+				"bio.haml",
+				"app/partials_haml/bio.haml"
+			],
+			[
+				"dir",
+				"app/js/directives.js"
+			],
+			[
+				"app.",
+				"app/js/app.js"
+			],
+			[
+				"proje",
+				"app/partials_haml/project.haml"
+			],
+			[
+				"projecthaml",
+				"app/partials_haml/project.haml"
+			],
+			[
+				"bioham",
+				"app/partials_haml/bio.haml"
+			],
+			[
+				"contr",
+				"app/js/controllersAdmin.js"
+			],
+			[
+				"contro",
+				"app/js/controllers.js"
+			],
+			[
+				"sty",
+				"app/less/style.less"
+			],
+			[
+				"sli",
+				"app/partials_haml/slide.haml"
+			],
+			[
+				"biohaml",
+				"app/partials_haml/bio.haml"
+			],
+			[
+				"bio.json",
+				"app/data/bio.json"
+			],
+			[
+				"variabl",
+				"app/less/variables.less"
+			],
+			[
+				"torea",
+				"TO READ.txt"
+			],
+			[
+				"fil",
+				"app/js/filters.js"
+			],
+			[
+				"app.js",
+				"app/js/app.js"
+			],
+			[
+				"ngcoffe",
+				"app/lib/ngInfiniteScroll/ng-infinite-scroll.coffee"
+			],
+			[
+				"infini",
+				"app/lib/ngInfiniteScroll/ng-infinite-scroll.js"
+			],
+			[
+				"styadm",
+				"app/less/styleAdmin.less"
+			],
+			[
+				"mixi",
+				"app/lib/bootstrap/less/mixins.less"
+			],
+			[
+				"var",
+				"app/less/variables.less"
+			],
+			[
+				"back",
+				"app/partials_haml/backgrounds.haml"
+			],
+			[
+				"script",
+				"app/js/script.js"
+			],
+			[
+				"hom",
+				"app/partials_haml/home.haml"
+			],
+			[
+				"show",
+				"app/partials_haml/showList.haml"
+			],
+			[
+				"shw",
+				"app/partials_haml/showList.haml"
+			],
+			[
+				"tore",
+				"TO READ.txt"
+			],
+			[
+				"conadmin",
+				"app/js/controllersAdmin.js"
+			],
+			[
+				"sholis",
+				"app/partials_haml/showList.haml"
+			],
+			[
+				"showli",
+				"app/partials_haml/showList.haml"
+			],
+			[
+				"projadmiha",
+				"app/partials_haml/projectListAdmin.haml"
+			],
+			[
+				"projectl",
+				"app/partials_haml/projectList.haml"
+			],
+			[
+				"appadmin",
+				"app/js/appAdmin.js"
+			],
+			[
+				"showl",
+				"app/partials_haml/showList.haml"
+			],
+			[
+				"showlis",
+				"app/partials_haml/showList.haml"
+			],
+			[
+				"xedit",
+				"app/lib/angular-xeditable/xeditable.js"
+			],
+			[
+				"sortable",
+				"app/lib/ui-sortable/src/sortable.js"
+			],
+			[
+				"serv",
+				"app/js/services.js"
+			],
+			[
+				"work",
+				"app/data/works.json"
+			],
+			[
+				"cotadmin",
+				"app/js/controllersAdmin.js"
+			],
+			[
+				"modal",
+				"app/partials_haml/modalResult.haml"
+			],
+			[
+				"diradmin",
+				"app/js/directivesAdmin.js"
+			],
+			[
+				"projlistadmin",
+				"app/partials_haml/projectListAdmin.haml"
+			],
+			[
+				"contadmin",
+				"app/js/controllersAdmin.js"
+			],
+			[
+				"scrollsp",
+				"app/lib/angular-bootstrap-scrollspy.min.js"
+			],
+			[
+				"angularscroll",
+				"app/lib/angular-bootstrap-scrollspy.min.js"
+			],
+			[
+				"angularboo",
+				"app/lib/angular-bootstrap-scrollspy.min.js"
+			],
+			[
+				"stylea",
+				"app/less/styleAdmin.less"
+			],
+			[
+				"styleless",
+				"app/less/style.less"
+			],
+			[
+				"scroll",
+				"app/lib/scrollsnap/jquery.scrollsnap.js"
+			],
+			[
+				"index.haml",
+				"app/index.haml"
+			],
+			[
+				"easing",
+				"app/lib/scrollsnap/jquery.easing.min.js"
+			],
+			[
+				"event",
+				"app/lib/scrollsnap/jquery.event.special.js"
+			],
+			[
+				"scrollsn",
+				"app/lib/scrollsnap/jquery.scrollsnap.js"
+			],
+			[
+				"panel",
+				"app/lib/jquery.panelSnap.js"
+			],
+			[
+				"mysl",
+				"app/js/mySlider.js"
+			],
+			[
+				"projli",
+				"app/partials_haml/projectList.haml"
+			],
+			[
+				"app.j",
+				"app/js/app.js"
+			],
+			[
+				"styel",
+				"app/less/styleAdmin.less"
+			],
+			[
+				"zeromin",
+				"app/lib/zeroclipboard/ZeroClipboard.min.js"
+			],
+			[
+				"controlladmin",
+				"app/js/controllersAdmin.js"
+			],
+			[
+				"bioadmin",
+				"app/partials_haml/bioAdmin.haml"
+			],
+			[
+				"proadmiham",
+				"app/partials_haml/projectListAdmin.haml"
+			],
+			[
+				"projead",
+				"app/partials/projectListAdmin.html"
+			],
+			[
+				"scr",
+				"app/js/script.js"
+			],
+			[
+				"appless",
+				"app/less/app.less"
+			],
+			[
+				"vari",
+				"app/less/variables.less"
+			],
+			[
+				"glyph",
+				"app/lib/bootstrap/less/glyphicons.less"
+			],
+			[
+				"type",
+				"app/lib/bootstrap/less/type.less"
+			],
+			[
+				"projectlist",
+				"app/partials_haml/projectList.haml"
+			],
+			[
+				"mixins",
+				"app/lib/bootstrap/less/mixins.less"
+			],
+			[
+				"appadless",
+				"app/less/styleAdmin.less"
+			],
+			[
+				"appadminjs",
+				"app/js/appAdmin.js"
+			],
+			[
+				"theme",
+				"app/data/theme.json"
+			],
+			[
+				"variable",
+				"app/less/variables.less"
+			],
+			[
+				"contact.ham",
+				"app/partials_haml/contact.haml"
+			],
+			[
+				"contact",
+				"app/partials/contact.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true
+}

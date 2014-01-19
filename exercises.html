@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head></head>
+  <meta content='text/html; charset=utf-8' http-equiv='content-type'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js' type='text/javascript'></script>
+  <script>
+    $('nav a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+    });
+    $('#myCollapsible').collapse({
+    	toggle: false
+    });
+  </script>
+  <title>Cours Javascript</title>
+  <body></body>
+  <nav class='navbar navbar-default navbar-fixed-top'>
+    <ul class='navbar-nav nav'>
+      <li>
+        <a class='navbar-brand'>
+          Cours Javascript
+        </a>
+      </li>
+      <li>
+        <a href='index.html'>Theory</a>
+      </li>
+      <li>
+        <a href='exercises.html'>Exercices</a>
+      </li>
+      <li>
+        <a href='resources.html'>Resources</a>
+      </li>
+    </ul>
+  </nav>
+  <ul class='nav nav-tabs'>
+    <li class='active'>
+      <a data-toggle='tab' href='#theory'>Théorie</a>
+    </li>
+    <li>
+      <a data-toggle='tab' href='#resources'>Resources</a>
+    </li>
+    <li>
+      <a data-toggle='tab' href='#exercises'>Exercices</a>
+    </li>
+  </ul>
+  <div class='container'>
+    <div class='col-md-12'>
+      <div class='panel-group'>
+        <div class='panel panel-default'>
+          <div class='panel-heading'>
+            <div data-target='#exos-monday' data-toggle='collapse'>
+              <h3>Organigramme</h3>
+            </div>
+          </div>
+          <div class='collapse panel-collapse panel-body in' id='exos-monday'>
+            <h4>Exercice 1:</h4>
+            <div>Dessinez lʼorganigramme de lʼachat dʼun billet de train à un automate CFF</div>
+            <div class='correction'>
+              <div class='btn btn-sm btn-success' data-target='#train' data-toggle='collapse'>Corrigé</div>
+              <div class='well well-sm collapse' id='train'>
+                asdas
+              </div>
+            </div>
+            <h4>Exercice 2:</h4>
+            Dessinez lʼorganigramme dʼun retrait à un bancomat
+            <h4>Exercice 2:</h4>
+            Dessinez quelques organigrammes nécessaires à site de e-commerce
+          </div>
+        </div>
+        <div class='panel panel-default'>
+          <div class='panel-heading'>
+            <div data-target='#exos-tuesday' data-toggle='collapse'>
+              <h3>Syntaxe 1</h3>
+            </div>
+          </div>
+          <div class='collapse panel-collapse panel-body' id='exos-tuesday'>
+            <h4>Exercice 1:</h4>
+            <div class='col-md-12'>
+              Afficher dans une boucle les nombres de 1 à 100 (un nombre par ligne):
+              <br>
+              1
+              <br>
+              2
+              <br>
+              3
+              <br>
+              4
+              <br>
+              ...
+              <br>
+              100
+            </div>
+            <h4>Exercice 2:</h4>
+            <div class='col-md-12'>
+              Afficher dans une boucle les nombres de 1 à 100 (un nombre par ligne):
+              <br>
+              2
+              <br>
+              4
+              <br>
+              6
+              <br>
+              8
+              <br>
+              ...
+              <br>
+              100
+            </div>
+            <h4>Exercice 3:</h4>
+            <div class='col-md-12'>
+              Afficher le tableau de multiplication suivant:
+              <table border='1'>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>14</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>15</td>
+                    <td>18</td>
+                    <td>21</td>
+                    <td>24</td>
+                    <td>27</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>16</td>
+                    <td>20</td>
+                    <td>24</td>
+                    <td>28</td>
+                    <td>32</td>
+                    <td>36</td>
+                    <td>40</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>25</td>
+                    <td>30</td>
+                    <td>35</td>
+                    <td>40</td>
+                    <td>45</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>24</td>
+                    <td>30</td>
+                    <td>36</td>
+                    <td>42</td>
+                    <td>48</td>
+                    <td>54</td>
+                    <td>60</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>14</td>
+                    <td>21</td>
+                    <td>28</td>
+                    <td>35</td>
+                    <td>42</td>
+                    <td>49</td>
+                    <td>56</td>
+                    <td>63</td>
+                    <td>70</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>16</td>
+                    <td>24</td>
+                    <td>32</td>
+                    <td>40</td>
+                    <td>48</td>
+                    <td>56</td>
+                    <td>64</td>
+                    <td>72</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>18</td>
+                    <td>27</td>
+                    <td>36</td>
+                    <td>45</td>
+                    <td>54</td>
+                    <td>63</td>
+                    <td>72</td>
+                    <td>81</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>50</td>
+                    <td>60</td>
+                    <td>70</td>
+                    <td>80</td>
+                    <td>90</td>
+                    <td>100</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class='panel panel-default'>
+          <div class='panel-heading'>
+            <div data-target='#exos-wednesday' data-toggle='collapse'>
+              <h3>Syntaxe 2</h3>
+            </div>
+          </div>
+          <div class='collapse panel-collapse panel-body' id='exos-wednesday'>
+            <h4>Exercice 1</h4>
+            <p>
+              Créer une fonction qui vérifie quʼune valeur est bien une année de naissance valide:
+              <br>
+              a) Cʼest une valeur numérique
+              <br>
+              b) La valeur est comprise entre 1900 et 2010
+            </p>
+            <p>
+              La fonction retourne true ou false
+              <br>
+              Utiliser la fonction avec des années de naissance correctes et incorrectes en affichant un message correspondant.
+              <br>
+              <em>Exemple:</em>
+              <br>
+              La valeur abcd nʼest pas une année de naissance valide. La valeur 999 nʼest pas une année de naissance valide La valeur 1999 est une année de naissance valide
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

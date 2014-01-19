@@ -1,0 +1,254 @@
+!!!
+%html{:lang => "fr"}
+	%head
+	%meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+	%link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}
+	%link{:href => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", :type => "text/javascript"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js", :type => "text/javascript"}
+	:javascript
+		$('nav a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+		});
+		$('#myCollapsible').collapse({
+			toggle: false
+		});
+	%title Cours Javascript
+	%body
+	.container
+		%nav.navbar.navbar-default.navbar-fixed-top
+
+			%ul.navbar-nav.nav
+				%li
+					%a.navbar-brand 
+						Cours Javascript
+				%li
+					%a{:href => "index.html"} Theory
+				%li
+					%a{:href => "exercises.html"} Exercices
+				%li
+					%a{:href => "resources.html"} Resources
+		%ul.nav.nav-tabs
+			%li.active
+				%a{"data-toggle" => "tab", :href => "#theory"} Théorie
+			%li
+				%a{"data-toggle" => "tab", :href => "#resources"} Resources
+			%li
+				%a{"data-toggle" => "tab", :href => "#exercises"} Exercices
+		/ Tab panes
+		.tab-content
+			#theory.tab-pane.active
+				%h2{"data-toggle" => "collapse", "data-target" => "#integration"} Intégration du code:
+				%section.col-md-12#integration.collapse.in
+					%h4 
+						Dans 
+						%code 
+							:escaped 
+								<head>
+						\:
+
+					%pre
+						:escaped
+							<script type="text/javascript">
+							Your code here...
+							</script>
+					%h4 Inline:
+					%pre
+						:escaped
+							<a onclick="alert()"> click me!</a>
+					.alert.alert-warning Considéré comme mauvaise pratique! (Séparation du contenu et de la présentation)
+					%h4 Par appel de module externe
+					%pre
+						:escaped
+							<script src="script.js"></script>
+				%h2{"data-toggle" => "collapse", "data-target" => "#syntax"} Syntaxe
+				%section.col-md-12#syntax.collapse.in
+					%h4 Outils
+					.alert.alert-info 
+						Une instruction se termine toujours par un 
+						%code ;
+					.panel-group
+						.panel.panel-default
+							.panel-heading
+								%div{"data-toggle" => "collapse", "data-target" => "#tools-vars"}
+									Variables: 
+									%code var foo;
+							.collapse.panel-collapse.panel-body#tools-vars
+								%p
+									%em Type:
+									3 types de variables: sans type,
+									%code Array
+									,
+									%code Object
+								%p 
+									%em Assignation: 
+									%pre
+										:preserve
+											foo = 3 + 2;
+											foo = 'a string';
+											myBook = {
+												ISBN: 123456,
+												author: 'Albert Camus',
+												title: "L'étranger", 
+											};
+						.panel.panel-default
+							.panel-heading
+								%div{"data-toggle" => "collapse", "data-target" => "#tools-fct"}
+									%em Fonctions: 	
+									%code function bar(){};
+							.collapse.panel-collapse.panel-body#tools-fct
+								%p Une fonction prend des arguments en entrée, et retourne une valeur.
+								%p 
+									%em Déclaration:
+									%pre
+										:preserve
+											function square(a) {
+												//corps de la fonction
+												var result = a*a;
+												return result;
+											}
+								%p 
+									%em Appel: 
+									%code square(3);
+								%p 
+									%em Portée: 
+									une variable créée à l'intérieur d'une fonction n'existe qu'à l'intérieur de cette fonction.
+								%p 
+									%em Effet de bord: 
+									Une fonction ne peut pas affecter le code qui se trouve en dehors de son corps.
+						.panel.panel-default
+							.panel-heading
+								%div{"data-toggle" => "collapse", "data-target" => "#tools-types"}
+									Structure de controles: 
+									%code if(...){}
+									,
+									%code for(...){}
+									,
+									%code switch(...){}
+									, ...
+							.collapse.panel-collapse.panel-body#tools-types
+								%h4 if:
+								.col-md-12
+									%pre
+										:preserve
+											if(condition1){ 
+												instructions; 
+											}
+											else if(condition2){
+												instructions; 
+
+											}
+											else{
+												instructions; 
+											}
+									%p
+										Les conditions sont des variables booléennes, qui valent soit 
+										%code true
+										, soit
+										%code false
+									%p
+										%em Opérateurs sur les booléens:
+										%ul.list-group
+											%li.list-group-item 
+												%code a == b
+												:escaped
+													:
+												%code a
+												est égal à 
+												%code b
+											%li.list-group-item 
+												%code a != b
+												:escaped
+													:
+												%code a
+												est différent de 
+												%code b
+											%li.list-group-item 
+												%code a > b
+												\/
+												%code a >= b
+												\/
+												%code a < b
+												\/
+												%code a <= b
+												:escaped
+													:
+												%code a
+												est plus strictement plus grand/ plus grand ou égal / strictement plus petit / plus petit ou égal à
+												%code b
+											%li.list-group-item 
+												%code a || b
+												:escaped
+													:
+												a
+												%b ou
+												b
+											%li.list-group-item 
+												%code a && b
+												:escaped
+													:
+												a
+												%b et
+												b
+
+								%h4 for:
+								.col-md-12
+									%p
+										%code for
+										permet de répéter une opération plusieurs fois. il prend comme paramètres une initialisation(
+										%code var i = 0;
+										), une condition d'arrêt (
+										%code i < 10
+										), et une instruction d'incrémentation(
+										%code i++
+										)
+									%pre
+										:preserve
+											for(var i = 0; i < 10; i++)
+											{
+												instructions;
+											}
+									.alert.alert-info 
+										Existent encore 
+										%code do{...} while
+										,
+										%code switch(foo){ ... }
+										, ...
+									
+									.alert.alert-info 
+										L'instruction 
+										%code break;
+										permet de sortir d'une structure de controle
+						.panel.panel-default
+							.panel-heading
+								%div{"data-toggle" => "collapse", "data-target" => "#tools-js"}
+									Fourni par javascript
+							.collapse.panel-collapse.panel-body#tools-js
+								%ul.list-group
+									%li.list-group-item 
+										%code alert("Alert!");
+										ouvre un dialogue d'alerte(à éviter!)
+									%li.list-group-item 
+										%code var name = prompt("What's your name?");
+										ouvre un dialogue d'alerte, et assigne l'entrée de l'utilisateur à une variable									
+									%li.list-group-item 
+										%code console.log("foo is now: ", foo);
+										écrit dans la console(utile pour débugger)
+									%li.list-group-item 
+										L'objet
+										%code Math
+										fournit les opérations standards mathématiques(
+										%code Math.min(3, 4) = 3
+										,
+										%code Math.sqrt(9) = 3
+										, ...)
+									%li.list-group-item 
+										%code typeof foo
+										permet de déterminer le type d'objet de 
+										%code foo
+									%li.list-group-item 
+										%code window
+										,
+										%code document
+						%h3 Exemple:

@@ -1,0 +1,65 @@
+!!!
+%html{:lang => "fr"}
+	%head
+	%meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+	%link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}
+	%link{:href => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", :type => "text/javascript"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js", :type => "text/javascript"}
+	:javascript
+		$('nav a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+		});
+		$('#myCollapsible').collapse({
+			toggle: false
+		});
+	%title Cours Javascript
+	%body
+		%nav.navbar.navbar-default.navbar-fixed-top
+
+			%ul.navbar-nav.nav
+				%li
+					%a.navbar-brand 
+						Cours Javascript
+				%li
+					%a{:href => "index.html"} Theory
+				%li
+					%a{:href => "exercises.html"} Exercices
+				%li
+					%a{:href => "resources.html"} Resources
+		%ul.nav.nav-tabs
+			%li.active
+				%a{"data-toggle" => "tab", :href => "#theory"} Théorie
+			%li
+				%a{"data-toggle" => "tab", :href => "#resources"} Resources
+			%li
+				%a{"data-toggle" => "tab", :href => "#exercises"} Exercices
+	.container
+		.col-md-12			
+			%h2 Slides:
+			%ul.list-group.col-md-12
+				%li.list-group-item
+					%a{:href => "slides/01_Javascript_Introduction_Programmation.pdf"} Introduction
+				%li.list-group-item.hidden
+					%a{:href => "slides/01_Javascript_Introduction_Programmation.pdf"} Introduction
+				%li.list-group-item.hidden
+					%a{:href => "slides/01_Javascript_Introduction_Programmation.pdf"} Introduction
+
+			%h2 Liens:
+			.col-md-12
+				%p	
+					Outil pour débugger, et partager son code facilement et rapidement: 
+					%a{:href => "http://jsfiddle.com", :target => "_blank"} jsfiddle.com
+				%p
+					Référence: 
+					%a{:href => "http://w3schools.com", :target => "_blank"} w3schools.com
+				%p
+					Éditeur de texte: 
+					%a{:href => "http://sublimetext.com", :target => "_blank"} Sublime Text
+				%p
+					IRC, très utile pour poser des questions(channels: ##javascript , #jquery , #html , #css , etc...): 
+					%a{:href => "http://webchat.quakenet.org/", :target => "_blank"} http://webchat.quakenet.org/
+				%p	
+					Références JS en pdf: 
+					%a{:href => "slides/00_SupportCours.pdf", :target => "_blank"} Programmation

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head></head>
+  <meta content='text/html; charset=utf-8' http-equiv='content-type'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js' type='text/javascript'></script>
+  <script>
+    $('nav a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+    });
+    $('#myCollapsible').collapse({
+    	toggle: false
+    });
+  </script>
+  <title>Cours Javascript</title>
+  <body></body>
+  <div class='container'>
+    <nav class='navbar navbar-default navbar-fixed-top'>
+      <ul class='navbar-nav nav'>
+        <li>
+          <a class='navbar-brand'>
+            Cours Javascript
+          </a>
+        </li>
+        <li>
+          <a href='index.html'>Theory</a>
+        </li>
+        <li>
+          <a href='exercises.html'>Exercices</a>
+        </li>
+        <li>
+          <a href='resources.html'>Resources</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class='nav nav-tabs'>
+      <li class='active'>
+        <a data-toggle='tab' href='#theory'>Théorie</a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#resources'>Resources</a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#exercises'>Exercices</a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class='tab-content'>
+      <div class='tab-pane active' id='theory'>
+        <h2 data-target='#integration' data-toggle='collapse'>Intégration du code:</h2>
+        <section class='col-md-12 collapse in' id='integration'>
+          <h4>
+            Dans
+            <code>&lt;head&gt;</code>
+            :
+          </h4>
+          <pre>&lt;script type=&quot;text/javascript&quot;&gt;
+          Your code here...
+          &lt;/script&gt;</pre>
+          <h4>Inline:</h4>
+          <pre>&lt;a onclick=&quot;alert()&quot;&gt; click me!&lt;/a&gt;</pre>
+          <div class='alert alert-warning'>Considéré comme mauvaise pratique! (Séparation du contenu et de la présentation)</div>
+          <h4>Par appel de module externe</h4>
+          <pre>&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</pre>
+        </section>
+        <h2 data-target='#syntax' data-toggle='collapse'>Syntaxe</h2>
+        <section class='col-md-12 collapse in' id='syntax'>
+          <h4>Outils</h4>
+          <div class='alert alert-info'>
+            Une instruction se termine toujours par un
+            <code>;</code>
+          </div>
+          <div class='panel-group'>
+            <div class='panel panel-default'>
+              <div class='panel-heading'>
+                <div data-target='#tools-vars' data-toggle='collapse'>
+                  Variables:
+                  <code>var foo;</code>
+                </div>
+              </div>
+              <div class='collapse panel-collapse panel-body' id='tools-vars'>
+                <p>
+                  <em>Type:</em>
+                  3 types de variables: sans type,
+                  <code>Array</code>
+                  ,
+                  <code>Object</code>
+                </p>
+                <p>
+                  <em>Assignation:</em>
+                  <pre>foo = 3 + 2;&#x000A;foo = 'a string';&#x000A;myBook = {&#x000A;	ISBN: 123456,&#x000A;	author: 'Albert Camus',&#x000A;	title: "L'étranger", &#x000A;};</pre>
+                </p>
+              </div>
+            </div>
+            <div class='panel panel-default'>
+              <div class='panel-heading'>
+                <div data-target='#tools-fct' data-toggle='collapse'>
+                  <em>Fonctions:</em>
+                  <code>function bar(){};</code>
+                </div>
+              </div>
+              <div class='collapse panel-collapse panel-body' id='tools-fct'>
+                <p>Une fonction prend des arguments en entrée, et retourne une valeur.</p>
+                <p>
+                  <em>Déclaration:</em>
+                  <pre>function square(a) {&#x000A;	//corps de la fonction&#x000A;	var result = a*a;&#x000A;	return result;&#x000A;}</pre>
+                </p>
+                <p>
+                  <em>Appel:</em>
+                  <code>square(3);</code>
+                </p>
+                <p>
+                  <em>Portée:</em>
+                  une variable créée à l'intérieur d'une fonction n'existe qu'à l'intérieur de cette fonction.
+                </p>
+                <p>
+                  <em>Effet de bord:</em>
+                  Une fonction ne peut pas affecter le code qui se trouve en dehors de son corps.
+                </p>
+              </div>
+            </div>
+            <div class='panel panel-default'>
+              <div class='panel-heading'>
+                <div data-target='#tools-types' data-toggle='collapse'>
+                  Structure de controles:
+                  <code>if(...){}</code>
+                  ,
+                  <code>for(...){}</code>
+                  ,
+                  <code>switch(...){}</code>
+                  , ...
+                </div>
+              </div>
+              <div class='collapse panel-collapse panel-body' id='tools-types'>
+                <h4>if:</h4>
+                <div class='col-md-12'>
+                  <pre>if(condition1){ &#x000A;	instructions; &#x000A;}&#x000A;else if(condition2){&#x000A;	instructions; &#x000A;&#x000A;}&#x000A;else{&#x000A;	instructions; &#x000A;}</pre>
+                  <p>
+                    Les conditions sont des variables booléennes, qui valent soit
+                    <code>true</code>
+                    , soit
+                    <code>false</code>
+                  </p>
+                  <p>
+                    <em>Opérateurs sur les booléens:</em>
+                    <ul class='list-group'>
+                      <li class='list-group-item'>
+                        <code>a == b</code>
+                        :
+                        <code>a</code>
+                        est égal à
+                        <code>b</code>
+                      </li>
+                      <li class='list-group-item'>
+                        <code>a != b</code>
+                        :
+                        <code>a</code>
+                        est différent de
+                        <code>b</code>
+                      </li>
+                      <li class='list-group-item'>
+                        <code>a > b</code>
+                        /
+                        <code>a >= b</code>
+                        /
+                        <code>a < b</code>
+                        /
+                        <code>a <= b</code>
+                        :
+                        <code>a</code>
+                        est plus strictement plus grand/ plus grand ou égal / strictement plus petit / plus petit ou égal à
+                        <code>b</code>
+                      </li>
+                      <li class='list-group-item'>
+                        <code>a || b</code>
+                        :
+                        a
+                        <b>ou</b>
+                        b
+                      </li>
+                      <li class='list-group-item'>
+                        <code>a && b</code>
+                        :
+                        a
+                        <b>et</b>
+                        b
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+                <h4>for:</h4>
+                <div class='col-md-12'>
+                  <p>
+                    <code>for</code>
+                    permet de répéter une opération plusieurs fois. il prend comme paramètres une initialisation(
+                    <code>var i = 0;</code>
+                    ), une condition d'arrêt (
+                    <code>i < 10</code>
+                    ), et une instruction d'incrémentation(
+                    <code>i++</code>
+                    )
+                  </p>
+                  <pre>for(var i = 0; i < 10; i++)&#x000A;{&#x000A;	instructions;&#x000A;}</pre>
+                  <div class='alert alert-info'>
+                    Existent encore
+                    <code>do{...} while</code>
+                    ,
+                    <code>switch(foo){ ... }</code>
+                    , ...
+                  </div>
+                  <div class='alert alert-info'>
+                    L'instruction
+                    <code>break;</code>
+                    permet de sortir d'une structure de controle
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='panel panel-default'>
+              <div class='panel-heading'>
+                <div data-target='#tools-js' data-toggle='collapse'>
+                  Fourni par javascript
+                </div>
+              </div>
+              <div class='collapse panel-collapse panel-body' id='tools-js'>
+                <ul class='list-group'>
+                  <li class='list-group-item'>
+                    <code>alert("Alert!");</code>
+                    ouvre un dialogue d'alerte(à éviter!)
+                  </li>
+                  <li class='list-group-item'>
+                    <code>var name = prompt("What's your name?");</code>
+                    ouvre un dialogue d'alerte, et assigne l'entrée de l'utilisateur à une variable
+                  </li>
+                  <li class='list-group-item'>
+                    <code>console.log("foo is now: ", foo);</code>
+                    écrit dans la console(utile pour débugger)
+                  </li>
+                  <li class='list-group-item'>
+                    L'objet
+                    <code>Math</code>
+                    fournit les opérations standards mathématiques(
+                    <code>Math.min(3, 4) = 3</code>
+                    ,
+                    <code>Math.sqrt(9) = 3</code>
+                    , ...)
+                  </li>
+                  <li class='list-group-item'>
+                    <code>typeof foo</code>
+                    permet de déterminer le type d'objet de
+                    <code>foo</code>
+                  </li>
+                  <li class='list-group-item'>
+                    <code>window</code>
+                    ,
+                    <code>document</code>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h3>Exemple:</h3>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</html>

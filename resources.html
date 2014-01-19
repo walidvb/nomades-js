@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head></head>
+  <meta content='text/html; charset=utf-8' http-equiv='content-type'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js' type='text/javascript'></script>
+  <script>
+    $('nav a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+    });
+    $('#myCollapsible').collapse({
+    	toggle: false
+    });
+  </script>
+  <title>Cours Javascript</title>
+  <body>
+    <nav class='navbar navbar-default navbar-fixed-top'>
+      <ul class='navbar-nav nav'>
+        <li>
+          <a class='navbar-brand'>
+            Cours Javascript
+          </a>
+        </li>
+        <li>
+          <a href='index.html'>Theory</a>
+        </li>
+        <li>
+          <a href='exercises.html'>Exercices</a>
+        </li>
+        <li>
+          <a href='resources.html'>Resources</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class='nav nav-tabs'>
+      <li class='active'>
+        <a data-toggle='tab' href='#theory'>Théorie</a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#resources'>Resources</a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#exercises'>Exercices</a>
+      </li>
+    </ul>
+  </body>
+  <div class='container'>
+    <div class='col-md-12'>
+      <h2>Slides:</h2>
+      <ul class='list-group col-md-12'>
+        <li class='list-group-item'>
+          <a href='slides/01_Javascript_Introduction_Programmation.pdf'>Introduction</a>
+        </li>
+        <li class='list-group-item hidden'>
+          <a href='slides/01_Javascript_Introduction_Programmation.pdf'>Introduction</a>
+        </li>
+        <li class='list-group-item hidden'>
+          <a href='slides/01_Javascript_Introduction_Programmation.pdf'>Introduction</a>
+        </li>
+      </ul>
+      <h2>Liens:</h2>
+      <div class='col-md-12'>
+        <p>
+          Outil pour débugger, et partager son code facilement et rapidement:
+          <a href='http://jsfiddle.com' target='_blank'>jsfiddle.com</a>
+        </p>
+        <p>
+          Référence:
+          <a href='http://w3schools.com' target='_blank'>w3schools.com</a>
+        </p>
+        <p>
+          Éditeur de texte:
+          <a href='http://sublimetext.com' target='_blank'>Sublime Text</a>
+        </p>
+        <p>
+          IRC, très utile pour poser des questions(channels: ##javascript , #jquery , #html , #css , etc...):
+          <a href='http://webchat.quakenet.org/' target='_blank'>http://webchat.quakenet.org/</a>
+        </p>
+        <p>
+          Références JS en pdf:
+          <a href='slides/00_SupportCours.pdf' target='_blank'>Programmation</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</html>
