@@ -5,6 +5,7 @@
   <link href='style.css' rel='stylesheet' type='text/css'>
   <link href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js' type='text/javascript'></script>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js' type='text/javascript'></script>
   <script>
     $('nav a').click(function (e) {
@@ -16,7 +17,7 @@
     });
   </script>
   <title>Cours Javascript</title>
-  <body></body>
+  <body ng-app></body>
   <nav class='navbar navbar-default navbar-fixed-top'>
     <ul class='navbar-nav nav'>
       <li>
@@ -28,24 +29,27 @@
         <a href='index.html'>Théorie</a>
       </li>
       <li>
+        <a href='examples.html'>Exemples</a>
+      </li>
+      <li>
         <a href='exercises.html'>Exercices</a>
       </li>
       <li>
         <a href='resources.html'>Resources</a>
       </li>
+      <li class='dropdown'>
+        <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+          Plus
+          <b class='caret'></b>
+        </a>
+        <ul class='dropdown-menu'>
+          <li>
+            <a href='wolf.html'>Le loup</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nav>
-  <ul class='nav nav-tabs'>
-    <li class='active'>
-      <a data-toggle='tab' href='#theory'>Théorie</a>
-    </li>
-    <li>
-      <a data-toggle='tab' href='#resources'>Resources</a>
-    </li>
-    <li>
-      <a data-toggle='tab' href='#exercises'>Exercices</a>
-    </li>
-  </ul>
   <div class='container'>
     <div class='col-md-12'>
       <div class='panel-group'>
@@ -55,16 +59,14 @@
               <h3>Organigramme</h3>
             </div>
           </div>
-          <div class='collapse panel-collapse panel-body in' id='exos-monday'>
-            <h4>Exercice 1:</h4>
-            <div>Dessinez lʼorganigramme de lʼachat dʼun billet de train à un automate CFF</div>
+          <div class='collapse panel-collapse panel-body' id='exos-monday'>
             <div class='correction'>
               <div class='btn btn-sm btn-success' data-target='#train' data-toggle='collapse'>Corrigé</div>
               <div class='well well-sm collapse' id='train'>
                 asdas
               </div>
             </div>
-            <h4>Exercice 2:</h4>
+            <h4>Exercice 1:</h4>
             Dessinez lʼorganigramme dʼun retrait à un bancomat
             <h4>Exercice 2:</h4>
             Dessinez quelques organigrammes nécessaires à site de e-commerce
@@ -76,7 +78,7 @@
               <h3>Syntaxe 1</h3>
             </div>
           </div>
-          <div class='collapse panel-collapse panel-body' id='exos-tuesday'>
+          <div class='collapse panel-collapse panel-body in' id='exos-tuesday'>
             <h4>Exercice 1:</h4>
             <div class='col-md-12'>
               Afficher dans une boucle les nombres de 1 à 100 (un nombre par ligne):
@@ -95,7 +97,7 @@
             </div>
             <h4>Exercice 2:</h4>
             <div class='col-md-12'>
-              Afficher dans une boucle les nombres de 1 à 100 (un nombre par ligne):
+              Afficher dans une boucle les nombres paires de 1 à 100 (un nombre par ligne):
               <br>
               2
               <br>
@@ -111,7 +113,9 @@
             </div>
             <h4>Exercice 3:</h4>
             <div class='col-md-12'>
-              Afficher le tableau de multiplication suivant:
+              Afficher le tableau de multiplication suivant(
+              <a href='http://jsfiddle.net/walidvb/FLq3f/'>base</a>
+              ):
               <table border='1'>
                 <tbody>
                   <tr>
@@ -236,32 +240,124 @@
                   </tr>
                 </tbody>
               </table>
+              <div class='alert alert-info'>
+                <em>Tip:</em>
+                pour ajouter un élément dans la page html, utiliser
+                <code>document.write('&lt;td&gt;');</code>
+                <code>document.write('
+                &lt;tr&gt;myValue&lt;/tr&gt;');</code>
+                <code>document.write('&lt;/td&gt;');</code>
+              </div>
             </div>
+            <div class='col-md-12'>
+              <h4>
+                Exercice 4
+                <a href='http://jsfiddle.net/Zm2KD/'>
+                  <em>(base)</em>
+                </a>
+              </h4>
+              <p>
+                Créer une fonction qui vérifie quʼune valeur est bien une année de naissance valide:
+                <br>
+                a) Cʼest une valeur numérique
+                <br>
+                b) La valeur est comprise entre 1900 et 2010
+              </p>
+              <p>
+                La fonction retourne true ou false
+                <br>
+                Utiliser la fonction avec des années de naissance correctes et incorrectes en affichant un message correspondant.
+                <br>
+                <em>Exemple:</em>
+                <br>
+                La valeur abcd nʼest pas une année de naissance valide. La valeur 999 nʼest pas une année de naissance valide La valeur 1999 est une année de naissance valide
+              </p>
+            </div>
+            <div class='col-md-12'>
+              <h4>
+                Exercice 5
+              </h4>
+              <p>Créer un objet ascenseur, qui  posséde les attributs suivants: étage actuel, poids maximal, nombre d'étages, état de la porte(ouvert/fermé), liste d'étage("Rez: Cafétéria", "1er: Bureau", "2ème: Salle de Gym", "3eme: Barbeque")</p>
+              <p>
+                Créez une fonction qui décrit l'ascenseur: "Cet ascenseur possède 3 étages: "Rez: Cafétéria, 1er: Bureau, 2ème: Salle de Gym, 3eme: Barbeque, et sa porte est fermée!
+                <em>
+                  <span class='glyphicon glyphicon-cog'></span>
+                  Tip: lisez la documentation sur  la structure de controle for(property in object)
+                </em>
+              </p>
+              Rappel lexical
+            </div>
+            <h3>Corrigé:</h3>
+            <iframe width="100%" height="300" src="http://jsfiddle.net/walidvb/s7hVQ/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
           </div>
         </div>
         <div class='panel panel-default'>
           <div class='panel-heading'>
             <div data-target='#exos-wednesday' data-toggle='collapse'>
-              <h3>Syntaxe 2</h3>
+              <h3>Syntaxe II</h3>
             </div>
           </div>
-          <div class='collapse panel-collapse panel-body' id='exos-wednesday'>
+          <div class='collapse panel-collapse panel-body in' id='exos-wednesday'>
             <h4>Exercice 1</h4>
             <p>
-              Créer une fonction qui vérifie quʼune valeur est bien une année de naissance valide:
+              Créer un formulaire avec un champ de saisie «Votre nombre» et un bouton «Ok». Lorsque l’utilisateur clique sur le bouton «Ok», le script affiche dans une boite de dialogue la table de multiplication du nombre saisi.
               <br>
-              a) Cʼest une valeur numérique
-              <br>
-              b) La valeur est comprise entre 1900 et 2010
+              <em>Si le nombre choisi est 7, alors on affichera 7 14 21 28 35 42 49 56 63 70</em>
             </p>
+            <h4>Exercice 2</h4>
+            <h5>a)</h5>
             <p>
-              La fonction retourne true ou false
+              Créer le formulaire suivant:
+            </p>
+            Votre date de naissance:
+            <input id='age-input'>
+            <button class='btn btn-md btn-success' onclick='var year = parseInt(document.getElementById("age-input").value);document.getElementById("age-result").value = (typeof year == "number" &amp;&amp; year &lt; 2014 &amp;&amp; year &gt;= 1930) ? 2014 - year : "Invalid year"'>ok</button>
+            <br>
+            Votre âge:
+            <input id='age-result'>
+            <br>
+            Lorsque l’utilisateur clique sur le bouton «Ok», le script calcule l’âge (2014 - année de naissance saisie)
+            <h5>b)</h5>
+            <p>Ajouter une étape de validation: si l’année de naissance n’est pas valide, le script écrira «Année invalide» dans le champ texte «Votre age»</p>
+            <h4>Exercice 3</h4>
+            <p>
+              Réalisez une interface «Machine à Café» permettant de sélectionner les options suivantes:
               <br>
-              Utiliser la fonction avec des années de naissance correctes et incorrectes en affichant un message correspondant.
+              <em>Type de boisson (un seul choix possible):</em>
+              <ul>
+                <li>Expresso</li>
+                <li>Café allongé</li>
+                <li>Cappucino</li>
+                <li>Chocolat</li>
+                <li>Thé</li>
+                <li>Bouillon</li>
+              </ul>
+              <em>Options supplémentaires (selon boisson choisie)</em>
+              <ul>
+                <li>Grains moulus (uniquement expresso, café allongé et cappucino)</li>
+                <li>Sucre (sauf pour le bouillon)</li>
+                <li>Lait (sauf pour le Cappucino, le chocolat et le bouillon)</li>
+                <li>Sans gobelet (l’utilisateur a son propre récipient)</li>
+              </ul>
+              <h5>a)</h5>
+              Les options sont «grisées/désactivées» selon la boisson choisie.
               <br>
-              <em>Exemple:</em>
+              L’interface résume au fur et à mesure les choix:
               <br>
-              La valeur abcd nʼest pas une année de naissance valide. La valeur 999 nʼest pas une année de naissance valide La valeur 1999 est une année de naissance valide
+              «Vous avez sélectionné un café, grains moulus, sans sucre, avec gobelet» «Vous avez sélectionné un thé, avec sucre, avec lait, sans gobelet»
+              <h5>b)</h5>
+              Le montant à payer est calculé et affiché selon les choix.
+              <em>Liste des prix:</em>
+              <ul>
+                <li>Toutes les boissons sauf bouillon: 1.-</li>
+                <li>Bouillon: 1.30</li>
+                <li>Grains moulus: 20 centimes</li>
+                <li>Sucre: gratuit</li>
+                <li>Lait: 10 centimes</li>
+                <li>Sans gobelet: - 10 centimes</li>
+              </ul>
+              <h5>c)</h5>
+              Ajouter un bouton «confirmer», lorsque l’utilisateur clique sur le bouton, une animation affiche le gobelet qui se remplit peu à peu avec la préparation, et affiche un message final: «votre boisson est prête».
             </p>
           </div>
         </div>

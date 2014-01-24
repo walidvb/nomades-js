@@ -25,32 +25,56 @@
 				%li
 					%a{:href => "index.html"} Théorie
 				%li
+					%a{:href => "examples.html"} Exemples
+				%li
 					%a{:href => "exercises.html"} Exercices
 				%li
 					%a{:href => "resources.html"} Resources
-		%ul.nav.nav-tabs
-			%li.active
-				%a{"data-toggle" => "tab", :href => "#theory"} Théorie
-			%li
-				%a{"data-toggle" => "tab", :href => "#resources"} Resources
-			%li
-				%a{"data-toggle" => "tab", :href => "#exercises"} Exercices
+				%li.dropdown
+					%a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+						Plus
+						%b.caret
+					%ul.dropdown-menu
+						%li
+							%a{:href => "wolf.html"} Le loup
 	.container
 		.col-md-12			
 			%h2 Slides:
-			%ul.list-group.col-md-12
+			%ul.list-group.col-md-12.slides
 				%li.list-group-item
-					%a{:href => "slides/01_Javascript_Introduction_Programmation.pdf"} Modélisation
+					%a{:href => "slides/03_Javascript_Introduction_Diagramme_de_sequence.pdf"} Modélisation
 				%li.list-group-item
-					%a{:href => "slides/03_Javascript_Introduction_Diagramme_de_sequence.pdf"} Introduction à la programmation
-				%li.list-group-item.hidden
-					%a{:href => "slides/01_Javascript_Introduction_Programmation.pdf"} Introduction
+					%a{:href => "slides/01_Javascript_Introduction_Programmation.pdf"} Introduction à la programmation
+				%li.list-group-item
+					%a{:href => "slides/javascript_syntaxe.pdf"} Introduction au Javascript
+			%h2 Javascript? Pourquoi?
+			.why
+				%p 
+					Des gars bons
+					%a{:href => 'http://signal-noise.co.uk/', :target => "_blank"} Signal | Noise
+				%p 
+					Un jeu utilisant le GoogleMaps API: 
+					%a{:href => "http://www.mapstd.com/", :target => "_blank"} mapstd.com
+				%p 
+					Visualisation real-time de tweets: 
+					%a{:href => "http://tweetmap.it/", :target => "_blank"} tweetmap.it
+				:plain 
+					<p data-height="504" data-theme-id="0" data-slug-hash="eLfHJ" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mobanbus/pen/eLfHJ'>eLfHJ</a> by mobanbus (<a href='http://codepen.io/mobanbus'>@mobanbus</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+						<script async src="//codepen.io/assets/embed/ei.js"></script>
+				:plain
+					<p data-height="268" data-theme-id="0" data-slug-hash="EjqbI" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/daless14/pen/EjqbI'>iPhone color picker web application</a> by Anthony D'Alessio (<a href='http://codepen.io/daless14'>@daless14</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
 			%h2 Liens:
 			.col-md-12
+				%p
+					Hour of code:
+					%a{:href => "http://learn.code.org/hoc", :target => "_blank"} learn.code.org/hoc
+				%p
+					Guide de référence:
+					%a{:href => "http://eloquentjavascript.net/contents.html", :target => "_blank"} eloquent javascript
 				%p	
 					Outil pour débugger, et partager son code facilement et rapidement: 
-					%a{:href => "http://jsfiddle.com", :target => "_blank"} jsfiddle.com
+					%a{:href => "http://jsfiddle.net", :target => "_blank"} jsfiddle.net
 				%p
 					Référence: 
 					%a{:href => "http://w3schools.com", :target => "_blank"} w3schools.com

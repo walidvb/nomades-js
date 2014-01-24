@@ -1,0 +1,111 @@
+!!!
+%html{:lang => "fr"}
+	%head
+	%meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+	%link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}
+	%link{:href => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", :type => "text/javascript"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js", :type => "text/javascript"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js", :type => "text/javascript"}
+	%script{:src => "js/wolfGame.js", :type => "text/javascript"}
+	%script{:src => "js/wolf.js", :type => "text/javascript"}
+	%style
+		:plain
+			canvas {
+				margin:auto;
+				margin-top: 5px;
+				border: 1px solid black;
+			}
+			html, body, .container, #instructions{
+				height: 100%;
+			}
+			#instructions {
+				overflow: scroll;
+			}
+	%title Cours Javascript
+	%body{"ng-app" => true}
+	
+	%nav.navbar.navbar-default.navbar-fixed-top#menu
+
+		%ul.navbar-nav.nav
+			%li
+				%a.navbar-brand 
+					Cours Javascript
+			%li
+				%a{:href => "index.html"} Théorie
+			%li
+				%a{:href => "examples.html"} Exemples
+			%li
+				%a{:href => "exercises.html"} Exercices
+			%li
+				%a{:href => "resources.html"} Resources
+			%li.dropdown
+				%a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+					Plus
+					%b.caret
+				%ul.dropdown-menu
+					%li
+						%a{:href => "wolf.html"} Le loup
+			   
+
+	.container
+		.col-md-4#instructions
+
+			%h2 Le Loup!
+			%p 
+				%a{:href => "http://plnkr.co/edit/5HHrL9M6swAmstp1r1q2?p=preview"} Lien vers l'exercice vierge!
+				%a{:href => "http://plnkr.co/edit/1a7ekIZEO8Rm6nj0zIwn?p=preview"} Correction de certaines étapes
+			.btn.btn-md{"onclick" => 'addSheep()'} Ajouter mouton 
+			Instructions:
+			%h4 Niveau 1:
+			%ul.list-group
+				%li.list-group-item
+					Ajouter un mouton à la liste.
+				%li.list-group-item
+					Ajouter un mouton malade à la liste
+					.alert.alert-info 
+						%em 
+							Un mouton malade a la propriété 
+							%code sick 
+							qui vaut 
+							%code true
+				%li.list-group-item
+					Ajouter 10 moutons dans la liste
+				%li.list-group-item
+					Ajouter aléatoirement des moutons malades ou en bonne santé!
+					.alert.alert-info
+						%em Chercher la documentation pour Math.random()!
+				%li.list-group-item
+					Ajouter une fonction qui permet d'enlever tous les moutons malades
+					.alert.alert-info Faites attention à la longueur de la liste quand vous itérez dessus!
+				%li.list-group-item
+					Ajouter une méthode au loup, qui lui permet de manger un mouton
+				%li.list-group-item
+					Si un mouton est mangé, le laisser dans la liste, mais l'enterrer
+					.alert.alert-info 
+						%em 
+							Pour enterrer un mouton, changer sa propriété 
+							%code dead
+							à 
+							%code true
+			%h4 Niveau 2:
+			%ul.list-group
+				%li.list-group-item
+					Empêcher le loup de manger des moutons malades
+				%li.list-group-item
+					Empecher le loup de manger plus de 3 moutons malades
+				%li.list-group-item
+					Si il y a plus de 8 moutons en bonne santé, faire fuire le loup!
+					.alert.alert-info
+						%em
+							Pour faire fuire le loup, changer son attribut
+							%code defeated
+							à
+							%code true
+							!
+				%li.list-group-item
+					Ajouter une méthode aux moutons leur permettant de se protéger
+					.alert.alert-info
+						%em 
+							Quand le loup mange le mouton, il doit vérifier si le mouton se protège(la protection est aléatoire)
+		.col-md-8#main

@@ -5,6 +5,8 @@
 	%link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}
 	%link{:href => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
 	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", :type => "text/javascript"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js", :type => "text/javascript"}
+
 	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js", :type => "text/javascript"}
 	:javascript
 		$('nav a').click(function (e) {
@@ -26,229 +28,537 @@
 				%li
 					%a{:href => "index.html"} Théorie
 				%li
+					%a{:href => "examples.html"} Exemples
+				%li
 					%a{:href => "exercises.html"} Exercices
 				%li
 					%a{:href => "resources.html"} Resources
-		%ul.nav.nav-tabs
-			%li.active
-				%a{"data-toggle" => "tab", :href => "#theory"} Théorie
-			%li
-				%a{"data-toggle" => "tab", :href => "#resources"} Resources
-			%li
-				%a{"data-toggle" => "tab", :href => "#exercises"} Exercices
+				%li.dropdown
+					%a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+						Plus
+						%b.caret
+					%ul.dropdown-menu
+						%li
+							%a{:href => "wolf.html"} Le loup
+
 		/ Tab panes
-		.tab-content
-			#theory.tab-pane.active
-				%h2{"data-toggle" => "collapse", "data-target" => "#integration"} Intégration du code:
-				%section.col-md-12#integration.collapse.in
-					%h4 
-						Dans 
-						%code 
-							:escaped 
-								<head>
-						\:
+	
+		#theory
+			%h2{"data-toggle" => "collapse", "data-target" => "#organigram"} Organigrammes: 
+			.col-md-12#organigram.collapse
+				%a{:href => "http://fr.wikipedia.org/wiki/Organigramme_de_programmation", :target => "_blank"} wikipédia
+			
+			%h2{"data-toggle" => "collapse", "data-target" => "#integration"} Intégration du code:
+			%section.col-md-12#integration.collapse.in
+				%h4 
+					Dans 
+					%code 
+						:escaped 
+							<head>
+					\:
 
-					%pre
-						:escaped
-							<script type="text/javascript">
-							Your code here...
-							</script>
-					%h4 Inline:
-					%pre
-						:escaped
-							<a onclick="alert()"> click me!</a>
-					.alert.alert-warning Considéré comme mauvaise pratique! (Séparation du contenu et de la présentation)
-					%h4 Par appel de module externe
-					%pre
-						:escaped
-							<script src="script.js"></script>
-				%h2{"data-toggle" => "collapse", "data-target" => "#syntax"} Syntaxe
-				%section.col-md-12#syntax.collapse.in
-					%h4 Outils
-					.alert.alert-info 
-						Une instruction se termine toujours par un 
-						%code ;
-					.panel-group
-						.panel.panel-default
-							.panel-heading
-								%div{"data-toggle" => "collapse", "data-target" => "#tools-vars"}
-									Variables: 
-									%code var foo;
-							.collapse.panel-collapse.panel-body#tools-vars
+				%pre
+					:escaped
+						<script type="text/javascript">
+						Your code here...
+						</script>
+				%h4 Inline:
+				%pre
+					:escaped
+						<a onclick="alert()"> click me!</a>
+				.alert.alert-warning Considéré comme mauvaise pratique! (Séparation du contenu et de la présentation)
+				%h4 Par appel de module externe
+				%pre
+					:escaped
+						<script src="script.js"></script>
+			%h2{"data-toggle" => "collapse", "data-target" => "#syntax"} Syntaxe I
+			%section.col-md-12#syntax.collapse.in
+				%h4 Outils
+				.alert.alert-info 
+					Une instruction se termine toujours par un 
+					%code ;
+				.panel-group
+					.panel.panel-default
+						.panel-heading
+							%div{"data-toggle" => "collapse", "data-target" => "#tools-vars"}
+								Variables: 
+								%code var foo;
+						.collapse.panel-collapse.panel-body#tools-vars
+							%p
+								%em Type:
+								3 types de variables: sans type,
+								%code Array
+								,
+								%code Object
+							%p 
+								%em Assignation: 
+								%pre
+									:preserve
+										foo = 3 + 2;
+										foo = 'a string';
+										myBook = {
+											ISBN: 123456,
+											author: 'Albert Camus',
+											title: "L'étranger", 
+										};
+										//Les deux écritures suivantes sont équivalentes
+										foo = (a > 3) ? 'red' : 'blue';
+										if(a > 3)
+										{
+										    foo = 'red';
+										}
+										else{
+										    foo = 'blue';
+										}
+							%p 
+								%code Array
+								Une array est une liste de plusieurs éléments. Elle possède les méthodes suivantes:
+								%pre
+									:preserve
+										//Déclaration et assignation:
+										var myList = ['Michel', 'Manon', 'Alexandre'];
+										//Accéder à l'élément i
+										myList[i];
+										//Ajouter un élément:
+										myList.push('Arnaud');
+										//retirer l'élément i
+										myList.slice(i, 1);
+					.panel.panel-default
+						.panel-heading
+							%div{"data-toggle" => "collapse", "data-target" => "#tools-fct"}
+								%em Fonctions: 	
+								%code function bar(){};
+						.collapse.panel-collapse.panel-body#tools-fct
+							%p Une fonction prend des arguments en entrée, et retourne une valeur.
+							%p 
+								%em Déclaration:
+								%pre
+									:preserve
+										function surface(height, length) {
+											//corps de la fonction
+											var result = heigth * length;
+											return result;
+										}
+							%p 
+								%em Appel: 
+								%code mySurface = surface(height, length);
+							%p 
+								%em Portée: 
+								une variable créée à l'intérieur d'une fonction n'existe qu'à l'intérieur de cette fonction.
+							%p 
+								%em Effet de bord: 
+								Une fonction ne peut pas modifier une variable.
+								%pre
+									:preserve
+										function square(myVar) {
+											var newValue = myVar * myVar;
+											myVar = newValue;
+											return newValue;
+										}
+										var foo = 5;
+										square(a);
+										//foo vaut toujours 5!
+										foo = square(foo);
+										//foo vaut 25!
+							%p 	
+								.alert.alert-warning
+									%span.glyphicon.glyphicon-cog 
+									une fonction qui s'appelle elle-même est une fonction récursive! 
+									%br
+								Exemple: Calculer n! 
+								%em Rappel: ( n! = n*(n-1)*(n-2)*...*1 )
+								%pre
+									:preserve
+										function factorial(num)
+										{
+										    // If the number is less than 0, reject it.
+										    if (num < 0) {
+										        return -1;
+										    }
+										    // If the number is 0, its factorial is 1.
+										    else if (num == 0) {
+										        return 1;
+										    }
+										    // Otherwise, call this recursive procedure again.
+										    else {
+										        return (num * factorial(num - 1));
+										    }
+										}
+
+					.panel.panel-default
+						.panel-heading
+							%div{"data-toggle" => "collapse", "data-target" => "#tools-types"}
+								Structure de controles: 
+								%code if(...){}
+								,
+								%code for(...){}
+								,
+								%code switch(...){}
+								, ...
+						.collapse.panel-collapse.panel-body#tools-types
+							%h4 if:
+							.col-md-12
+								%pre
+									:preserve
+										if(condition1){ 
+											instructions; 
+										}
+										else if(condition2){
+											instructions; 
+
+										}
+										else{
+											instructions; 
+										}
 								%p
-									%em Type:
-									3 types de variables: sans type,
-									%code Array
+									Les conditions sont des variables booléennes, qui valent soit 
+									%code true
+									, soit
+									%code false
+								%p
+									%em Comment créer des booléens?:
+									%ul.list-group
+										%li.list-group-item 
+											%code a = true;
+										%li.list-group-item 
+											%code a == b
+											:escaped
+												:
+											%code a
+											est égal à 
+											%code b
+										%li.list-group-item 
+											%code a != b
+											:escaped
+												:
+											%code a
+											est différent de 
+											%code b
+										%li.list-group-item 
+											%code a > b
+											\/
+											%code a >= b
+											\/
+											%code a < b
+											\/
+											%code a <= b
+											:escaped
+												:
+											%code a
+											est plus strictement plus grand/ plus grand ou égal / strictement plus petit / plus petit ou égal à
+											%code b
+										%li.list-group-item 
+											%code a || b
+											:escaped
+												:
+											a
+											%b ou
+											b
+										%li.list-group-item 
+											%code a && b
+											:escaped
+												:
+											a
+											%b et
+											b
+
+							%h4 for:
+							.col-md-12
+								%p
+									%code for
+									permet de répéter une opération plusieurs fois. il prend comme paramètres une initialisation(
+									%code var i = 0;
+									), une condition d'arrêt (
+									%code i < 10
+									), et une instruction d'incrémentation(
+									%code i++
+									)
+								%pre
+									:preserve
+										for(var i = 0; i < 10; i++)
+										{
+											instructions;
+										}
+								.alert.alert-info 
+									Existent encore 
+									%code do{...} while
 									,
-									%code Object
-								%p 
-									%em Assignation: 
-									%pre
-										:preserve
-											foo = 3 + 2;
-											foo = 'a string';
-											myBook = {
-												ISBN: 123456,
-												author: 'Albert Camus',
-												title: "L'étranger", 
-											};
-						.panel.panel-default
-							.panel-heading
-								%div{"data-toggle" => "collapse", "data-target" => "#tools-fct"}
-									%em Fonctions: 	
-									%code function bar(){};
-							.collapse.panel-collapse.panel-body#tools-fct
-								%p Une fonction prend des arguments en entrée, et retourne une valeur.
-								%p 
-									%em Déclaration:
-									%pre
-										:preserve
-											function square(a) {
-												//corps de la fonction
-												var result = a*a;
-												return result;
-											}
-								%p 
-									%em Appel: 
-									%code square(3);
-								%p 
-									%em Portée: 
-									une variable créée à l'intérieur d'une fonction n'existe qu'à l'intérieur de cette fonction.
-								%p 
-									%em Effet de bord: 
-									Une fonction ne peut pas affecter le code qui se trouve en dehors de son corps.
-						.panel.panel-default
-							.panel-heading
-								%div{"data-toggle" => "collapse", "data-target" => "#tools-types"}
-									Structure de controles: 
-									%code if(...){}
-									,
-									%code for(...){}
-									,
-									%code switch(...){}
+									%code switch(foo){ ... }
 									, ...
-							.collapse.panel-collapse.panel-body#tools-types
-								%h4 if:
-								.col-md-12
-									%pre
-										:preserve
-											if(condition1){ 
-												instructions; 
-											}
-											else if(condition2){
-												instructions; 
-
-											}
-											else{
-												instructions; 
-											}
-									%p
-										Les conditions sont des variables booléennes, qui valent soit 
-										%code true
-										, soit
-										%code false
-									%p
-										%em Opérateurs sur les booléens:
-										%ul.list-group
-											%li.list-group-item 
-												%code a == b
-												:escaped
-													:
-												%code a
-												est égal à 
-												%code b
-											%li.list-group-item 
-												%code a != b
-												:escaped
-													:
-												%code a
-												est différent de 
-												%code b
-											%li.list-group-item 
-												%code a > b
-												\/
-												%code a >= b
-												\/
-												%code a < b
-												\/
-												%code a <= b
-												:escaped
-													:
-												%code a
-												est plus strictement plus grand/ plus grand ou égal / strictement plus petit / plus petit ou égal à
-												%code b
-											%li.list-group-item 
-												%code a || b
-												:escaped
-													:
-												a
-												%b ou
-												b
-											%li.list-group-item 
-												%code a && b
-												:escaped
-													:
-												a
-												%b et
-												b
-
-								%h4 for:
-								.col-md-12
-									%p
-										%code for
-										permet de répéter une opération plusieurs fois. il prend comme paramètres une initialisation(
-										%code var i = 0;
-										), une condition d'arrêt (
-										%code i < 10
-										), et une instruction d'incrémentation(
-										%code i++
-										)
-									%pre
-										:preserve
-											for(var i = 0; i < 10; i++)
-											{
-												instructions;
-											}
-									.alert.alert-info 
-										Existent encore 
-										%code do{...} while
-										,
-										%code switch(foo){ ... }
-										, ...
-									
-									.alert.alert-info 
-										L'instruction 
-										%code break;
-										permet de sortir d'une structure de controle
-						.panel.panel-default
-							.panel-heading
-								%div{"data-toggle" => "collapse", "data-target" => "#tools-js"}
-									Fourni par javascript
-							.collapse.panel-collapse.panel-body#tools-js
+								
+								.alert.alert-info 
+									L'instruction 
+									%code break;
+									permet de sortir d'une structure de controle
+					.panel.panel-default
+						.panel-heading
+							%div{"data-toggle" => "collapse", "data-target" => "#tools-js"}
+								Fourni par javascript
+						.collapse.panel-collapse.panel-body#tools-js
+							%ul.list-group
+								%li.list-group-item 
+									%code alert("Alert!");
+									ouvre un dialogue d'alerte(à éviter!)
+								%li.list-group-item 
+									%code var name = prompt("What's your name?");
+									ouvre un dialogue d'alerte, et assigne l'entrée de l'utilisateur à une variable									
+								%li.list-group-item 
+									%code console.log("foo is now: ", foo);
+									écrit dans la console(utile pour débugger)
+								%li.list-group-item 
+									L'objet
+									%code Math
+									fournit les opérations standards mathématiques(
+									%code Math.min(3, 4) = 3
+									,
+									%code Math.sqrt(9) = 3
+									, ...)
+								%li.list-group-item 
+									%code typeof foo
+									permet de déterminer le type d'objet de 
+									%code foo
+								%li.list-group-item 
+									%code window
+									,
+									%code document
+									%em à suivre...
+					.panel.panel-default
+						.panel-heading
+							%div{"data-toggle" => "collapse", "data-target" => "#tools-object"}
+								Objects			
+						.collapse.panel-collapse.panel-body#tools-object
+							%p En javascript, presque tout est un object.
+							%p 
+								un 
+								%code Object 
+								permet de stocker plusieurs donnée dans une variable:
+							%pre
+								:preserve
+									var walid = {
+										name : 'Walid',
+										address: '3, rue du Faubourg'
+									}
+							%p 
+								un
+								%code Object
+								peut posséder, en plus de données, des fonctions!
+							%pre
+								:preserve
+									var person = {
+										name : 'Walid',
+										address : '3, rue du Faubourg',
+										getInfo : function(){
+											return this.name + ' ' + this.address;
+										}
+									}
+							%p 
+								On peut accéder aux propriétés des 
+								%code Object
+								s en appelant 
+								%code Object.property
+								ou 
+								%code Object['property']
+							%p 
+								les 
+								%code Object
+								s fournis par javascript possèdent déjà leurs propres méthodes!
 								%ul.list-group
-									%li.list-group-item 
-										%code alert("Alert!");
-										ouvre un dialogue d'alerte(à éviter!)
-									%li.list-group-item 
-										%code var name = prompt("What's your name?");
-										ouvre un dialogue d'alerte, et assigne l'entrée de l'utilisateur à une variable									
-									%li.list-group-item 
-										%code console.log("foo is now: ", foo);
-										écrit dans la console(utile pour débugger)
-									%li.list-group-item 
-										L'objet
-										%code Math
-										fournit les opérations standards mathématiques(
-										%code Math.min(3, 4) = 3
+									%li.list-group-item
+										%code String
+										\: 
+										%code .toLowerCase()
 										,
-										%code Math.sqrt(9) = 3
-										, ...)
-									%li.list-group-item 
-										%code typeof foo
-										permet de déterminer le type d'objet de 
-										%code foo
-									%li.list-group-item 
-										%code window
+										%code .length
+									%li.list-group-item
+										%code Array
+										\:
+										%code myArray[3]
 										,
+										%code .push(elem)
+										(pour ajouter elem dans l'array),
+										%code .indexOf(elem)
+										(permet de connaître l'emplacement de 
+										%code elem
+										dans l'array. Si 
+										%code elem
+										n'est pas trouvé, retourne -1)
+									%li.list-group-item
+										%code console
+										possède la méthode
+										%code log
+										!
+									%li.list-group-item
 										%code document
-						%h3 Exemple:
+										\:
+										%code getElementById(id)
+										,
+										%code getElementsByClass(id)
+							%p
+								On peut créer un 
+								%em constructeur 
+								d'objet, de manière à créer un 'classe':
+								%pre
+									:preserve
+										function Person(name, address) {
+											this.name = name;
+											this.address = address;
+											this.getInfo = function() {
+												return this.name + ' ' + this.address;
+											}
+											return this;
+										}
+
+										var walid = new Person('Walid', '3, rue du Faubourg');
+										var michel = new Person('Michel', '18, col du Simplon')
+
+										console.log(walid.address) //loggera '3, rue du Faubourg'
+
+					%h3{"data-toggle" => "collapse", "data-target" => "#examples-1"} 
+						Exemples:
+						%span.caret
+					#examples-1.collapse
+						Résumé:
+						%pre
+							:escaped
+							
+								var cars = ['Mazda', 'Peugeot', 'Honda', 'Mercedes'];
+
+								cars.length
+
+								cars[2]
+
+								for(var i=0; i<cars.length; i++) {
+								    var currentCar = cars[i];
+
+								    console.log(currentCar);
+								}
+
+
+								//types de variables:
+
+								var foo;
+								var bar;
+								foo = 'some name';
+								var foo2 = foo;
+								//foo2 vaut 'some name'
+								foo = 16;
+								foo += 3 // équivaut à foo = foo + 3
+
+								bar = foo;
+								//bar vaut 16
+
+								//Array: liste d'éléments
+								var myList = ['elem0', 'elem1', 'elem2'];
+								//Accéder à l'élément i
+								myList[0]; // sera elem0
+
+								//Booléens: true / false
+
+
+								//opérateur sur booléen:
+								foo = true;
+								bar = false;
+
+								var condition1 = isRed && has3Doors; //condition1 sera vrai si isRed est vrai _et_ has3Doors est vrai
+								var condition2 = isRed || isGreen; //condition sera vrai isRed _ou_ isGreen est true (l'un ou l'autre)
+
+
+								/*--------------------------------------------*/
+								// If
+
+								//if(a && b)
+								//if(a < maxA)
+								//if(a < maxA && a > minA)
+								if(isRed) //si la voiture est rouge
+								{
+								     if(has3Doors)
+
+								     {
+								          //revends la   
+								     }
+								    else{
+								        //garde la
+								    }
+								}
+								else(condition2) // si la condition2 est vrai
+								{
+								    //execute ces instructions
+								    instruction1;
+								    instruction2;
+
+								}
+
+								//For
+								//permet d'effectuer la même opération plusieurs fois
+								//for(initialisation; condition d'arret; incrementation) {}
+								//iMax dépend de ton problème. si tu veux itérer 100 fois, iMax = 100. si tu veux itérer 3 fois, iMax = 3
+
+								for(var i = 0; i < iMax; i++){
+								     //instruction1;
+								     //instruction2;
+								}
+
+								//autre syntaxe
+								var j = 0;
+								while(j < jMax)
+								{
+								    //instruction1;
+								    //instruction2;
+								    j++;
+								}
+
+
+								/*----------------------------------------*/
+
+								function surface(h,l){
+								 return h*l;
+								}
+			%h2{"data-toggle" => "collapse", "data-target" => "#syntax-2"} Syntaxe II
+			%section.col-md-12#syntax-2.collapse.in
+				.panel.panel-default
+					.panel-heading
+						%div{"data-toggle" => "collapse", "data-target" => "#dom-1"}
+							Manipulation du HTML
+					.collapse.panel-collapse.panel-body#dom-1.in
+						%p
+							%em Pour récupérer des éléments de la page html, les différentes fonctions sont disponibles:
+							%ul.list-group
+								%li.list-group-item
+									%code document.getElementById(id);
+									\: récupérer l'élément "#id"
+								%li.list-group-item
+									%code document.getElementsByClassName(class);
+									\: récupérer la liste des éléments avec la classe "class"	
+								%li.list-group-item
+									%code document.getElementsByTagName(tag);
+									\: récupérer la liste des éléments de type "tag"
+						.alert.alert-warning
+							%p 
+								Les fonctions 
+								%code getElementsByClassName()
+								et
+								%code getElementsByTagName()
+								retourne une liste! 
+							%p
+								Pour accéder au premier élément trouvé, il est donc nécessaire d'utiliser la syntaxe des 
+								%code Array
+								\:
+								%code document.getElementsByClassName('my-class')[0];
+								!
+						%p
+							%em Pour modifier le contenu de ces éléments: 
+							%code element.innerHTML = "nouveau contenu!;"
+						%p
+							%em 
+								Pour lire le contenu d'un élément
+								%code input
+								\:
+							%code var value = document.getElementById('#input').value;
+						%p
+							%em Pour modifier le style d'un élément:
+							%code element.style.color = 'blue';
+							%code element.style.['backgroud-color'] = 'blue';
+						Exemples: 
+						:plain 
+							<iframe width="100%" height="300" src="http://jsfiddle.net/walidvb/RAs5N/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+						

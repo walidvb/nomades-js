@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head></head>
+  <meta content='text/html; charset=utf-8' http-equiv='content-type'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js' type='text/javascript'></script>
+  <script>
+    $('nav a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+    });
+    $('#myCollapsible').collapse({
+    	toggle: false
+    });
+  </script>
+  <title>Cours Javascript</title>
+  <body>
+    <nav class='navbar navbar-default navbar-fixed-top'>
+      <ul class='navbar-nav nav'>
+        <li>
+          <a class='navbar-brand'>
+            Cours Javascript
+          </a>
+        </li>
+        <li>
+          <a href='index.html'>Théorie</a>
+        </li>
+        <li>
+          <a href='examples.html'>Exemples</a>
+        </li>
+        <li>
+          <a href='exercises.html'>Exercices</a>
+        </li>
+        <li>
+          <a href='resources.html'>Resources</a>
+        </li>
+        <li class='dropdown'>
+          <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+            Plus
+            <b class='caret'></b>
+          </a>
+          <ul class='dropdown-menu'>
+            <li>
+              <a href='wolf.html'>Le loup</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+  <div class='container'>
+    <div class='col-md-12'>
+      <h3>Les voitures</h3>
+      <iframe width="100%" height="300" src="http://jsfiddle.net/walidvb/qxTnU/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <h3>L'ascenseur</h3>
+      <iframe width="100%" height="300" src="http://jsfiddle.net/walidvb/DyEcR/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <h3>Changer les couleurs</h3>
+      <iframe width="100%" height="300" src="http://jsfiddle.net/walidvb/Uer2N/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <h3>Le Jukebox</h3>
+      <iframe width="100%" height="300" src="http://jsfiddle.net/walidvb/HUCwU/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    </div>
+  </div>
+</html>

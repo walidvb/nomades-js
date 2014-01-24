@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head></head>
+  <meta content='text/html; charset=utf-8' http-equiv='content-type'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js' type='text/javascript'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js' type='text/javascript'></script>
+  <script src='js/wolfGame.js' type='text/javascript'></script>
+  <script src='js/wolf.js' type='text/javascript'></script>
+  <style>
+    canvas {
+    	margin:auto;
+    	margin-top: 5px;
+    	border: 1px solid black;
+    }
+    html, body, .container, #instructions{
+    	height: 100%;
+    }
+    #instructions {
+    	overflow: scroll;
+    }
+  </style>
+  <title>Cours Javascript</title>
+  <body ng-app></body>
+  <nav class='navbar navbar-default navbar-fixed-top' id='menu'>
+    <ul class='navbar-nav nav'>
+      <li>
+        <a class='navbar-brand'>
+          Cours Javascript
+        </a>
+      </li>
+      <li>
+        <a href='index.html'>Théorie</a>
+      </li>
+      <li>
+        <a href='examples.html'>Exemples</a>
+      </li>
+      <li>
+        <a href='exercises.html'>Exercices</a>
+      </li>
+      <li>
+        <a href='resources.html'>Resources</a>
+      </li>
+      <li class='dropdown'>
+        <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+          Plus
+          <b class='caret'></b>
+        </a>
+        <ul class='dropdown-menu'>
+          <li>
+            <a href='wolf.html'>Le loup</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class='container'>
+    <div class='col-md-4' id='instructions'>
+      <h2>Le Loup!</h2>
+      <p>
+        <a href='http://plnkr.co/edit/5HHrL9M6swAmstp1r1q2?p=preview'>Lien vers l'exercice vierge!</a>
+        <a href='http://plnkr.co/edit/1a7ekIZEO8Rm6nj0zIwn?p=preview'>Correction de certaines étapes</a>
+      </p>
+      <div class='btn btn-md' onclick='addSheep()'>Ajouter mouton</div>
+      Instructions:
+      <h4>Niveau 1:</h4>
+      <ul class='list-group'>
+        <li class='list-group-item'>
+          Ajouter un mouton à la liste.
+        </li>
+        <li class='list-group-item'>
+          Ajouter un mouton malade à la liste
+          <div class='alert alert-info'>
+            <em>
+              Un mouton malade a la propriété
+              <code>sick</code>
+              qui vaut
+              <code>true</code>
+            </em>
+          </div>
+        </li>
+        <li class='list-group-item'>
+          Ajouter 10 moutons dans la liste
+        </li>
+        <li class='list-group-item'>
+          Ajouter aléatoirement des moutons malades ou en bonne santé!
+          <div class='alert alert-info'>
+            <em>Chercher la documentation pour Math.random()!</em>
+          </div>
+        </li>
+        <li class='list-group-item'>
+          Ajouter une fonction qui permet d'enlever tous les moutons malades
+          <div class='alert alert-info'>Faites attention à la longueur de la liste quand vous itérez dessus!</div>
+        </li>
+        <li class='list-group-item'>
+          Ajouter une méthode au loup, qui lui permet de manger un mouton
+        </li>
+        <li class='list-group-item'>
+          Si un mouton est mangé, le laisser dans la liste, mais l'enterrer
+          <div class='alert alert-info'>
+            <em>
+              Pour enterrer un mouton, changer sa propriété
+              <code>dead</code>
+              à
+              <code>true</code>
+            </em>
+          </div>
+        </li>
+      </ul>
+      <h4>Niveau 2:</h4>
+      <ul class='list-group'>
+        <li class='list-group-item'>
+          Empêcher le loup de manger des moutons malades
+        </li>
+        <li class='list-group-item'>
+          Empecher le loup de manger plus de 3 moutons malades
+        </li>
+        <li class='list-group-item'>
+          Si il y a plus de 8 moutons en bonne santé, faire fuire le loup!
+          <div class='alert alert-info'>
+            <em>
+              Pour faire fuire le loup, changer son attribut
+              <code>defeated</code>
+              à
+              <code>true</code>
+              !
+            </em>
+          </div>
+        </li>
+        <li class='list-group-item'>
+          Ajouter une méthode aux moutons leur permettant de se protéger
+          <div class='alert alert-info'>
+            <em>
+              Quand le loup mange le mouton, il doit vérifier si le mouton se protège(la protection est aléatoire)
+            </em>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class='col-md-8' id='main'></div>
+  </div>
+</html>

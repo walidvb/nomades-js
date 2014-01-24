@@ -5,6 +5,7 @@
 	%link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}
 	%link{:href => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
 	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", :type => "text/javascript"}
+	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js", :type => "text/javascript"}
 	%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js", :type => "text/javascript"}
 	:javascript
 		$('nav a').click(function (e) {
@@ -15,7 +16,7 @@
 			toggle: false
 		});
 	%title Cours Javascript
-	%body
+	%body{"ng-app" => true}
 	
 	%nav.navbar.navbar-default.navbar-fixed-top
 
@@ -26,16 +27,18 @@
 			%li
 				%a{:href => "index.html"} Théorie
 			%li
+				%a{:href => "examples.html"} Exemples
+			%li
 				%a{:href => "exercises.html"} Exercices
 			%li
 				%a{:href => "resources.html"} Resources
-	%ul.nav.nav-tabs
-		%li.active
-			%a{"data-toggle" => "tab", :href => "#theory"} Théorie
-		%li
-			%a{"data-toggle" => "tab", :href => "#resources"} Resources
-		%li
-			%a{"data-toggle" => "tab", :href => "#exercises"} Exercices
+			%li.dropdown
+				%a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+					Plus
+					%b.caret
+				%ul.dropdown-menu
+					%li
+						%a{:href => "wolf.html"} Le loup
 	.container
 		.col-md-12
 			.panel-group
@@ -43,14 +46,13 @@
 					.panel-heading
 						%div{"data-toggle" => "collapse", "data-target" => "#exos-monday"}
 							%h3 Organigramme
-					.collapse.panel-collapse.panel-body#exos-monday.in
-						%h4 Exercice 1:
-						%div Dessinez lʼorganigramme de lʼachat dʼun billet de train à un automate CFF
+					.collapse.panel-collapse.panel-body#exos-monday
+						
 						.correction
 							.btn.btn-sm.btn-success{"data-toggle" => "collapse", "data-target" => "#train"} Corrigé
 							.well.well-sm#train.collapse  
 								asdas
-						%h4 Exercice 2:
+						%h4 Exercice 1:
 						Dessinez lʼorganigramme dʼun retrait à un bancomat
 						%h4 Exercice 2:
 						Dessinez quelques organigrammes nécessaires à site de e-commerce
@@ -59,7 +61,7 @@
 					.panel-heading
 						%div{"data-toggle" => "collapse", "data-target" => "#exos-tuesday"}
 							%h3 Syntaxe 1
-					.collapse.panel-collapse.panel-body#exos-tuesday
+					.collapse.panel-collapse.panel-body#exos-tuesday.in
 						%h4 Exercice 1:
 						.col-md-12
 							Afficher dans une boucle les nombres de 1 à 100 (un nombre par ligne):
@@ -77,7 +79,7 @@
 							100
 						%h4 Exercice 2:
 						.col-md-12
-							Afficher dans une boucle les nombres de 1 à 100 (un nombre par ligne):
+							Afficher dans une boucle les nombres paires de 1 à 100 (un nombre par ligne):
 							%br
 							2
 							%br
@@ -92,7 +94,9 @@
 							100
 						%h4 Exercice 3:
 						.col-md-12
-							Afficher le tableau de multiplication suivant:
+							Afficher le tableau de multiplication suivant( 
+							%a{:href => 'http://jsfiddle.net/walidvb/FLq3f/'} base 
+							):
 							%table{:border => "1"}
 								%tbody
 									%tr
@@ -205,23 +209,112 @@
 										%td 80
 										%td 90
 										%td 100
+
+							.alert.alert-info 
+								%em Tip:
+								pour ajouter un élément dans la page html, utiliser 
+								%code 
+									:escaped
+										document.write('<td>');
+								%code 
+									document.write('
+									:escaped
+										<tr>myValue</tr>');
+								%code 
+									:escaped
+										document.write('</td>');
+
+							
+						.col-md-12
+							%h4 
+								Exercice 4
+								%a{:href => "http://jsfiddle.net/Zm2KD/"} 
+									%em (base)
+							%p 
+								Créer une fonction qui vérifie quʼune valeur est bien une année de naissance valide: 
+								%br
+								a) Cʼest une valeur numérique
+								%br
+								b) La valeur est comprise entre 1900 et 2010
+							%p
+								La fonction retourne true ou false
+								%br
+								Utiliser la fonction avec des années de naissance correctes et incorrectes en affichant un message correspondant.
+								%br
+								%em Exemple:
+								%br
+								La valeur abcd nʼest pas une année de naissance valide. La valeur 999 nʼest pas une année de naissance valide La valeur 1999 est une année de naissance valide
+						.col-md-12
+							%h4
+								Exercice 5
+							%p Créer un objet ascenseur, qui  posséde les attributs suivants: étage actuel, poids maximal, nombre d'étages, état de la porte(ouvert/fermé), liste d'étage("Rez: Cafétéria", "1er: Bureau", "2ème: Salle de Gym", "3eme: Barbeque")
+							%p 
+								Créez une fonction qui décrit l'ascenseur: "Cet ascenseur possède 3 étages: "Rez: Cafétéria, 1er: Bureau, 2ème: Salle de Gym, 3eme: Barbeque, et sa porte est fermée!
+								%em 
+									%span.glyphicon.glyphicon-cog 
+									Tip: lisez la documentation sur  la structure de controle for(property in object)
+							Rappel lexical
+
+						%h3 Corrigé:
+						:plain
+							<iframe width="100%" height="300" src="http://jsfiddle.net/walidvb/s7hVQ/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 				.panel.panel-default
 					.panel-heading
 						%div{"data-toggle" => "collapse", "data-target" => "#exos-wednesday"}
-							%h3 Syntaxe 2
-					.collapse.panel-collapse.panel-body#exos-wednesday
+							%h3 Syntaxe II
+					.collapse.panel-collapse.panel-body#exos-wednesday.in
 						%h4 Exercice 1
 						%p 
-							Créer une fonction qui vérifie quʼune valeur est bien une année de naissance valide: 
+							Créer un formulaire avec un champ de saisie «Votre nombre» et un bouton «Ok». Lorsque l’utilisateur clique sur le bouton «Ok», le script affiche dans une boite de dialogue la table de multiplication du nombre saisi.
 							%br
-							a) Cʼest une valeur numérique
-							%br
-							b) La valeur est comprise entre 1900 et 2010
+							%em Si le nombre choisi est 7, alors on affichera 7 14 21 28 35 42 49 56 63 70
+						%h4 Exercice 2
+						%h5 a)
 						%p
-							La fonction retourne true ou false
+							Créer le formulaire suivant:
+						Votre date de naissance:
+						%input#age-input
+						%button.btn.btn-md.btn-success{'onclick' => 'var year = parseInt(document.getElementById("age-input").value);document.getElementById("age-result").value = (typeof year == "number" && year < 2014 && year >= 1930) ? 2014 - year : "Invalid year"'} ok
+						%br
+						Votre âge:
+						%input#age-result
+						%br
+						Lorsque l’utilisateur clique sur le bouton «Ok», le script calcule l’âge (2014 - année de naissance saisie)
+						%h5 b)
+						%p Ajouter une étape de validation: si l’année de naissance n’est pas valide, le script écrira «Année invalide» dans le champ texte «Votre age»
+						%h4 Exercice 3
+						%p 
+							Réalisez une interface «Machine à Café» permettant de sélectionner les options suivantes:
 							%br
-							Utiliser la fonction avec des années de naissance correctes et incorrectes en affichant un message correspondant.
+							%em Type de boisson (un seul choix possible): 
+							%ul
+								%li Expresso
+								%li Café allongé 
+								%li Cappucino
+								%li Chocolat
+								%li Thé
+								%li Bouillon
+							%em Options supplémentaires (selon boisson choisie)
+							%ul
+								%li Grains moulus (uniquement expresso, café allongé et cappucino) 
+								%li Sucre (sauf pour le bouillon)
+								%li Lait (sauf pour le Cappucino, le chocolat et le bouillon)
+								%li Sans gobelet (l’utilisateur a son propre récipient)
+							%h5 a)
+							Les options sont «grisées/désactivées» selon la boisson choisie.
 							%br
-							%em Exemple:
+							L’interface résume au fur et à mesure les choix:
 							%br
-							La valeur abcd nʼest pas une année de naissance valide. La valeur 999 nʼest pas une année de naissance valide La valeur 1999 est une année de naissance valide
+							«Vous avez sélectionné un café, grains moulus, sans sucre, avec gobelet» «Vous avez sélectionné un thé, avec sucre, avec lait, sans gobelet»
+							%h5 b)
+							Le montant à payer est calculé et affiché selon les choix. 
+							%em Liste des prix:
+							%ul
+								%li Toutes les boissons sauf bouillon: 1.-
+								%li Bouillon: 1.30
+								%li Grains moulus: 20 centimes 
+								%li Sucre: gratuit
+								%li Lait: 10 centimes
+								%li Sans gobelet: - 10 centimes
+							%h5 c)
+							Ajouter un bouton «confirmer», lorsque l’utilisateur clique sur le bouton, une animation affiche le gobelet qui se remplit peu à peu avec la préparation, et affiche un message final: «votre boisson est prête».
